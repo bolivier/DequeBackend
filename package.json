@@ -7,6 +7,10 @@
   },
   "dependencies": {
     "express": "3.3.5",
-    "jade": "*"
+    "jade": "*",
+    "dwolla": "~0.1.1",
+    "passport-dwolla": "~0.1.2",
+    "sgwapi": "~0.3.4",
+    "firebase": "~0.6.14"
   }
 }
