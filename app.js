@@ -5,7 +5,6 @@
 var _ = require('underscore');
 var fb_url = 'http://dralexmv.firebaseio.com/';
 var express = require('express');
-var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 var firebase = require('firebase');
