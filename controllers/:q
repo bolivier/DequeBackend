@@ -1,0 +1,39 @@
+exports.postReward = function(req, res) {
+	var s_id = req.body.params.subject_id;
+  var subject = base_fb.child('users').child(s_id);
+	var subject_email = subject.child('personals').child('email').var();
+	var amount = req.body.params.amount;
+	var deck_id = req.body.params.deck_id;
+	var deck = base_fb.child('decks').child(deck_id);
+	var budget = deck.child('budget');
+	var new_budget = budget.val() - amount;
+
+	//FIX THE PARAMS IN THE DWOLLA CALL
+	
+	//call to dwolla
+	if(new_budget < 0) {
+		res.status(403).send('not enough dough');
+	}
+	else {
+
+		dwolla.send(dw_cred.token, 
+				dw_cred.pin, 
+				subject_email,
+				amount, 
+				function (err, data) {
+					if(err) {
+						console.log(err);
+						res.status(403).send("sending error");
+					}
+					else {
+						budget.set(new_budget);
+						console.log("sending begin");
+						var researcher = req.body.params.researcher;
+
+						console.log("sending complete");
+						res.status(200).send('sent: ', amount);
+					}
+				});
+	}
+};
+
