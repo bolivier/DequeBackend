@@ -6,6 +6,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+	"node": "0.10.12",
     "express": "3.3.5",
     "jade": "*",
     "dwolla": "~0.1.1",
