@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node app.js"
+
   },
+  "engines: {
+	"node": "0.10.12",
+	"npm":  "1.3.1"
+  }
   "dependencies": {
-	"Node.js": "0.10.12",
     "express": "3.3.5",
     "jade": "*",
     "dwolla": "~0.1.1",
