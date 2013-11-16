@@ -15,7 +15,7 @@ exports.send = function(req, res) {
 			console.log(user_attribs);
 			sendgrid.send({
 				to: user_attribs.personals.email,
-				from: 'nick@deque.com',
+				from: creds.sendgrid.from,
 				subject: subject,
 				text: message
 			}, function(err, response) {

@@ -9,7 +9,8 @@ exports.dwolla = {
 
 exports.sendgrid = {
 	api_user: 'bolivier',
-	api_key: 'password1'
+	api_key: 'password1',
+	from: 'admin@deque.com'
 };
 
 exports.twilio = {
