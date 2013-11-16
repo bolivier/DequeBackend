@@ -1,4 +1,3 @@
-
 /*
  * Module dependencies.
  */
@@ -16,7 +15,7 @@ base_fb = new firebase(fb_url);
 app = express();
 
 //generate Dwolla credentials
-var dw_cred = require('./controllers/dwolla').credentials;
+var dw_cred = require('./credentials').dwolla;
 
 // all environments
 app.set('port', process.env.PORT || 3000);

@@ -10,9 +10,11 @@
     "jade": "*",
     "dwolla": "~0.1.1",
     "passport-dwolla": "~0.1.2",
-    "sgwapi": "~0.3.4",
     "firebase": "~0.6.14",
     "underscore": "~1.5.2",
-    "q": "~0.9.7"
+    "q": "~0.9.7",
+    "sendgrid": "~0.4.4",
+    "iconv-lite": "~0.2.11",
+    "twilio": "~1.4.0"
   }
 }
