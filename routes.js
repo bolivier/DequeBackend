@@ -4,7 +4,6 @@ var lunr = require('./controllers/indexing');
 module.exports =  function(app) {
 
 	//GET
-	app.get('/', public/index.html);
 
 	//POST
 	app.post('/api/decks/:deck_id/users/:subject_id/reward', reward.postReward);
